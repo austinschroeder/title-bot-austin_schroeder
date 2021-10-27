@@ -4,12 +4,12 @@
 
 *This app contains a web form that allows a user to type in a url to any website, and have it then output the 'Title' of that website on the same page.*
 
-### Client side front-end code can be found in /front-end (made with React.js)
+### •Client side front-end code can be found in /front-end (made with React.js)
 
-### Server side back-end code can be found in /back-end (made with Node.js/Express)
+### •Server side back-end code can be found in /back-end (made with Node.js/Express)
 
 ---
-
+#######################
 To run this application:
 
 -clone repo
