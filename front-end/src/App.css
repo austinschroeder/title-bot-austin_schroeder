@@ -1,0 +1,20 @@
+body {
+  /* background-image: url(https://pbs.twimg.com/profile_images/1410712763416989696/E3e_aJMm.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 10%;
+  background-size: 40rem; */
+}
+
+.logo {
+  height: 100px;
+}
+
+.badge {
+  font-size: 2rem;
+}
+
+.result {
+  text-align: center;
+  background-color: white;
+}
