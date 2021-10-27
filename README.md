@@ -12,7 +12,7 @@
 
 To run this application:
 
--clone repo
+**-clone repo**
 
 -INSIDE of 'front-end' directory: install dependencies with `npm i`
 
