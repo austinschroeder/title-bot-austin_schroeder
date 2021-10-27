@@ -6,14 +6,14 @@ const got = require("got");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-// Middleware
+// Set cors options
 
 const corsOptions = {
   origin: "*",
 };
 app.use(cors(corsOptions));
 
-//Routes
+// Define routes
 app.use(express.static(__dirname)); //https://stackoverflow.com/questions/19620239/cant-get-index-html-to-show-with-express-in-nodejs
 
 app.use(express.json());
@@ -39,5 +39,5 @@ app.post("/title-bot", async (req, res) => {
   res.json(data);
 });
 
-// Listen for Requests
+// Listen for requests
 app.listen(4000, () => console.log("Server running on port 4000"));
