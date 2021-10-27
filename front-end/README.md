@@ -5,6 +5,6 @@ Instructions:
 ---
 -clone repo
 
--install dependencies with `npm i`
+-INSIDE of 'front-end' directory: install dependencies with `npm i`
 
--start react enviroment with `npm start`
+-iNSIDE of 'front-end' directory:start react enviroment with `npm start`
