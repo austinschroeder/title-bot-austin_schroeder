@@ -10,16 +10,16 @@
 
 ---
 
-To run this application:
+#### * To run this application: *
 
 **1. clone repo**
 
-2. from 'front-end' directory: install dependencies with `npm i`
+**2. from 'front-end' directory: install dependencies with `npm i`**
 
-3. from 'front-end' directory: start react enviroment with `npm start`
+**3. from 'front-end' directory: start react enviroment with `npm start`**
 
 ---
 
-4. from 'back-end' directory: install dependencies with `npm i`
+**4. from 'back-end' directory: install dependencies with `npm i`**
 
-5. start server with `nodemon server`
+**5. start server with `nodemon server`**
