@@ -9,7 +9,6 @@
 ### •Server side back-end code can be found in /back-end (made with Node.js/Express)
 
 ---
-#######################
 
 To run this application:
 
