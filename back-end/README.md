@@ -5,6 +5,6 @@ Instructions:
 ---
 -clone repo
 
--INSIDE OF 'back-end' directory: install dependencies with `npm i`
+-INSIDE of 'back-end' directory: install dependencies with `npm i`
 
 -start server with `nodemon server`
