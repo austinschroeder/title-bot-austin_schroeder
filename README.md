@@ -4,4 +4,4 @@
 
 ### Client side front-end code can be found in /front-end (made with React.js)
 
-### Server side back-end code can be found in /back-end
+### Server side back-end code can be found in /back-end (made with Node.js/Express)
