@@ -20,4 +20,4 @@
 
 4. from 'back-end' directory: install dependencies with `npm i`
 
-5. start server with `nodemon server`
+5. start server with `npm start`
