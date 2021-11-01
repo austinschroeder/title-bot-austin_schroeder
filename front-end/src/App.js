@@ -12,10 +12,10 @@ function App() {
     const queryObject = { URL: inputRef.current.value };
     console.log(inputRef);
     returnTitle(queryObject)
-      .then((res) => res.json())
+      .then((res) => res.json()) //Converting string to json
       .then((res) => {
         console.log(res);
-        setResult(res); //set state to res
+        setResult(res); //Update state from empty string to res
       });
   };
 
@@ -42,7 +42,7 @@ function App() {
       <main className="container">
         <div className="row">
           <div className="col col-md-6 offset-md-3">
-            <h4 className="mb-4">Retrieve the site title below!</h4>
+            <h4 className="mb-4 text-white">Retrieve the site title below!</h4>
 
             <Form.Control
               ref={inputRef}
