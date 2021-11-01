@@ -57,7 +57,7 @@ function App() {
               className="btn-secondary mb-5"
               id="searchBtn"
             >
-              Search
+              Get Title
             </Button>
 
             <h4 className="result text-danger" id="title">
