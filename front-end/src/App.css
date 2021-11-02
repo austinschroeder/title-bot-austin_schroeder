@@ -1,5 +1,10 @@
 body {
-  background-image: url(https://cdn.wallpapersafari.com/29/34/8Ak1Sf.png);
+  background: url(https://cdn.wallpapersafari.com/29/34/8Ak1Sf.png) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .logo {
