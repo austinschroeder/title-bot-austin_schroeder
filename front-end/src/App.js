@@ -7,15 +7,19 @@ const titleApi = "http://127.0.0.1:4000/title-bot";
 
 function App() {
   const [result, setResult] = useState("");
+  const [titleHistory, setTitleHistory] = useState([]);
   const inputRef = useRef(undefined);
+
   const clickHandler = () => {
     const queryObject = { URL: inputRef.current.value };
-    console.log(inputRef);
+    // console.log(inputRef);
     returnTitle(queryObject)
       .then((res) => res.json()) //Converting string to json
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setResult(res); //Update state from empty string to res
+        setTitleHistory((prevState, newState) => [...prevState, newState]);
+        console.log(titleHistory);
       });
   };
 
@@ -33,7 +37,7 @@ function App() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
         <div className="container">
-          <a className="navbar-brand badge bg-secondary" href="#">
+          <a className="navbar-brand badge bg-dark" href="#">
             Title-Bot
           </a>
         </div>
@@ -62,6 +66,7 @@ function App() {
 
             <h4 className="result text-danger" id="title">
               {result}
+              {titleHistory}
             </h4>
           </div>
         </div>
