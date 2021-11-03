@@ -16,9 +16,8 @@ function App() {
     returnTitle(queryObject)
       .then((res) => res.json()) //Converting string to json
       .then((res) => {
-        // console.log(res);
         setResult(res); //Update state from empty string to res
-        setTitleHistory((prevState, newState) => [...prevState, newState]);
+        setTitleHistory((prevState) => [...prevState, res]);
         console.log(titleHistory);
       });
   };
@@ -47,7 +46,6 @@ function App() {
         <div className="row">
           <div className="col col-md-6 offset-md-3">
             <h4 className="mb-4 text-white">Retrieve the site title below!</h4>
-
             <Form.Control
               ref={inputRef}
               placeholder="Enter URL"
@@ -55,7 +53,6 @@ function App() {
               className="form-control mb-2"
               id="searchUrl"
             />
-
             <Button
               onClick={clickHandler}
               className="btn-secondary mb-5"
@@ -63,11 +60,15 @@ function App() {
             >
               Get Title
             </Button>
-
-            <h4 className="result text-danger" id="title">
-              {result}
-              {titleHistory}
-            </h4>
+            {/* <h4 className="result text-danger" id="title"> */}
+            {/* {result} */}
+            {/* {titleHistory} */}
+            {titleHistory.map((title, index) => (
+              <div key={index} className="result text-danger mb-3" id="title">
+                * {title}
+              </div>
+            ))}
+            {/* </h4> */}
           </div>
         </div>
       </main>
