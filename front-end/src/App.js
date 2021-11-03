@@ -6,7 +6,7 @@ import "./App.css";
 const titleApi = "http://127.0.0.1:4000/title-bot";
 
 function App() {
-  const [result, setResult] = useState("");
+  // const [result, setResult] = useState("");
   const [titleHistory, setTitleHistory] = useState([]);
   const inputRef = useRef(undefined);
 
@@ -16,7 +16,7 @@ function App() {
     returnTitle(queryObject)
       .then((res) => res.json()) //Converting string to json
       .then((res) => {
-        setResult(res); //Update state from empty string to res
+        // setResult(res); //Update state from empty string to res
         setTitleHistory((prevState) => [...prevState, res]);
         console.log(titleHistory);
       });
@@ -36,7 +36,7 @@ function App() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
         <div className="container">
-          <a className="navbar-brand badge bg-dark" href="#">
+          <a className="navbar-brand badge bg-dark" href="/#">
             Title-Bot
           </a>
         </div>
