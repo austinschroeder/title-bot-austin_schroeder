@@ -1,9 +1,9 @@
-import { Form, Button } from "react-bootstrap";
-import { useRef, useState } from "react";
+import { Form, Button } from 'react-bootstrap';
+import { useRef, useState } from 'react';
 
-import "./App.css";
+import './App.css';
 
-const titleApi = "http://127.0.0.1:4000/title-bot";
+const titleApi = 'http://127.0.0.1:4000/title-bot';
 
 function App() {
   // const [result, setResult] = useState("");
@@ -12,21 +12,19 @@ function App() {
 
   const clickHandler = () => {
     const queryObject = { URL: inputRef.current.value };
-    // console.log(inputRef);
     returnTitle(queryObject)
       .then((res) => res.json()) //Converting string to json
       .then((res) => {
         // setResult(res); //Update state from empty string to res
-        setTitleHistory((prevState) => [...prevState, res]);
-        console.log(titleHistory);
+        setTitleHistory((prevState) => [res, ...prevState]);
       });
   };
 
   const returnTitle = (query) => {
     return fetch(titleApi, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(query),
     });
