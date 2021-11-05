@@ -6,7 +6,6 @@ import './App.css';
 const titleApi = 'http://127.0.0.1:4000/title-bot';
 
 function App() {
-  // const [result, setResult] = useState("");
   const [titleHistory, setTitleHistory] = useState([]);
   const inputRef = useRef(undefined);
 
@@ -15,7 +14,6 @@ function App() {
     returnTitle(queryObject)
       .then((res) => res.json()) //Converting string to json
       .then((res) => {
-        // setResult(res); //Update state from empty string to res
         setTitleHistory((prevState) => [res, ...prevState]);
       });
   };
@@ -58,15 +56,11 @@ function App() {
             >
               Get Title
             </Button>
-            {/* <h4 className="result text-danger" id="title"> */}
-            {/* {result} */}
-            {/* {titleHistory} */}
             {titleHistory.map((title, index) => (
               <div key={index} className="result text-danger mb-3" id="title">
                 * {title}
               </div>
             ))}
-            {/* </h4> */}
           </div>
         </div>
       </main>

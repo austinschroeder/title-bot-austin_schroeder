@@ -24,6 +24,7 @@ app.post('/title-bot', async (req, res) => {
   try {
     const response = await got(providedUrl);
 
+    //DOM in object form.  Inspect with node looking for title
     const dom = new JSDOM(response.body); //https://www.twilio.com/blog/web-scraping-and-parsing-html-in-node-js-with-jsdom
     const allTitles = [...dom.window.document.querySelectorAll('title')];
 
@@ -34,7 +35,6 @@ app.post('/title-bot', async (req, res) => {
         data = title.text;
       }
     });
-    console.log(data);
 
     res.json(data);
   } catch (err) {
