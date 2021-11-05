@@ -38,7 +38,7 @@ app.post('/title-bot', async (req, res) => {
 
     res.json(data);
   } catch (err) {
-    res.json('Invalid URL' + providedUrl);
+    res.json(providedUrl + ' = Invalid URL');
   }
 });
 
