@@ -12,9 +12,9 @@ function App() {
   const clickHandler = () => {
     const queryObject = { URL: inputRef.current.value };
     returnTitle(queryObject)
-      .then((res) => res.json()) //Converting string to json
+      .then((res) => res.json()) // Converting string to json
       .then((res) => {
-        setTitleHistory((prevState) => [res, ...prevState]);
+        setTitleHistory((prevState) => [res, ...prevState]); // Update titleHistory state to display new data
       });
   };
 

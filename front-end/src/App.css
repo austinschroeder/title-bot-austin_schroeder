@@ -5,7 +5,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .logo {
@@ -19,5 +19,4 @@ body {
 
 .result {
   text-align: center;
-  /* background-color: white; */
 }
